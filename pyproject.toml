@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evidence-toolkit"
+version = "0.1.0"
+description = "Question-driven evidence extraction, quotation verification and audits for literature reviews"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = ["pymupdf>=1.24", "pandas>=2.0", "openpyxl>=3.1"]
+
+[project.optional-dependencies]
+docx = ["python-docx>=1.1"]
+
+[project.scripts]
+evidence-toolkit = "evidence_toolkit.cli:main"
+
+[tool.setuptools]
+packages = ["evidence_toolkit"]
